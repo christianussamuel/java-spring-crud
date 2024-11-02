@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "991b7969-e978-439b-adec-6cf7a67630d9",
+		"name": "Xtramile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10226921"
+	},
+	"item": [
+		{
+			"name": "Get Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pagination\": {\r\n        \"page\":0,\r\n        \"size\":3,\r\n        \"field\": \"gender\",\r\n        \"sort\": \"asc\"\r\n    },\r\n    \"filter\": {\r\n        \"firstName\": \"david\",\r\n        \"lastName\": \"\",\r\n        \"patientIdentity\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL_PATIENT}}/api/v1/get/patient",
+					"host": [
+						"{{BASE_URL_PATIENT}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"get",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"David\",\r\n    \"lastName\": \"Beckahm\",\r\n    \"dateOfBirth\": \"02-01-2000\",\r\n    \"gender\": \"female\",\r\n    \"address\": \"sesame street no.23\",\r\n    \"suburb\": \"jakarta\",\r\n    \"state\": \"central jakarta\",\r\n    \"postCode\": 10201,\r\n    \"phoneNumber\": \"089123812421\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL_PATIENT}}/api/v1/create/patient",
+					"host": [
+						"{{BASE_URL_PATIENT}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patientIdentity\": \"afa52253-cccf-4545-94a7-7f53710ec8e2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL_PATIENT}}/api/v1/delete/patient",
+					"host": [
+						"{{BASE_URL_PATIENT}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"delete",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patientIdentity\": \"d1750baf-4bb1-43a7-b64c-1c779d467e25\",\r\n    \"gender\": \"female\",\r\n    \"address\": \"free street no.23\",\r\n    \"suburb\": \"jakarta\",\r\n    \"state\": \"central jakarta\",\r\n    \"firstName\": \"laura\",\r\n    \"lastName\": \"christ\",\r\n    \"dateOfBirth\": \"02-01-1998\",\r\n    \"postCode\": 10211,\r\n    \"phoneNumber\": \"081238912312\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL_PATIENT}}/api/v1/update/patient",
+					"host": [
+						"{{BASE_URL_PATIENT}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"update",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
